@@ -174,4 +174,34 @@ sudo ufw allow 443/tcp  # Ejemplo para HTTPS
 sudo ufw deny 22  # Bloquear SSH si no se usa
 ```
 
+# 🌐 Protocolos Clave del Día a Día Web
+
+## 1. 🔗 HTTP/HTTPS
+HTTP (HyperText Transfer Protocol) es el protocolo básico para navegar por internet. Permite que tu navegador solicite y reciba páginas web desde los servidores. HTTPS es la versión segura que cifra toda la comunicación, protegiendo tu información personal y contraseñas. Es por eso que ves el candado 🔒 en tu navegador cuando visitas sitios seguros como bancos o tiendas online.
+## 2. 🏷️ DNS (Domain Name System)
+Es como la "guía telefónica" de internet. Cuando escribes google.com en tu navegador, DNS traduce ese nombre fácil de recordar a la dirección IP numérica real del servidor (como 172.217.164.110). Sin DNS, tendrías que memorizar números complicados para cada sitio web que quieras visitar.
+## 3. 🏠 DHCP (Dynamic Host Configuration Protocol)
+Es el protocolo que automáticamente asigna direcciones IP a los dispositivos cuando se conectan a una red. Cuando tu teléfono se conecta al WiFi de casa, DHCP le da una dirección IP única, configura la puerta de enlace y los servidores DNS. Sin DHCP, tendrías que configurar manualmente estos valores en cada dispositivo.
+## 4. 🚚 TCP vs UDP
+TCP (Transmission Control Protocol) es como un servicio de paquetería confiable que garantiza que todos los datos lleguen completos y en orden. UDP (User Datagram Protocol) es como enviar postales: más rápido pero sin garantía de entrega.
+
+# 📊 Ejemplos de uso:
+
+## 🌐 Navegación web (TCP):
+
+Necesitas que todas las partes de una página web lleguen correctamente
+TCP verifica que el texto, imágenes y código se descarguen sin errores
+Si algo se pierde, TCP lo reenvía automáticamente
+
+## 🎮 Streaming y videojuegos (UDP):
+
+En Netflix o YouTube, si se pierde un fotograma, es mejor continuar que detenerse
+En videojuegos online, es preferible tener respuesta rápida aunque ocasionalmente se pierda algún dato
+UDP prioriza la velocidad sobre la perfección
+
+## 📹 Videoconferencias (UDP):
+
+En Zoom o Teams, es mejor que la conversación fluya aunque se corte brevemente
+La comunicación en tiempo real requiere velocidad más que precisión absoluta
+
 [🔼 Volver al inicio](#-Puertos-y-Protocolos-Esenciales-para-Desarrolladores-Web)
