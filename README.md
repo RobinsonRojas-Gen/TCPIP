@@ -242,3 +242,63 @@ Status: 200 OK, Content-Type: text/html
 Tu navegador construye la página que ves
 
 Puede hacer peticiones adicionales para imágenes, CSS, etc.
+
+# 🛠️ Herramientas Esenciales para Analizar Redes y Protocolos
+
+## 📌 Comandos Básicos de Diagnóstico
+
+| Herramienta  | Plataforma | Uso Principal | Comando Ejemplo | Visualización |
+|--------------|-----------|---------------|-----------------|---------------|
+| **`ping`** 🏓 | Multiplataforma | Verificar conectividad básica | `ping google.com` | ⏱️ Tiempo de respuesta |
+| **`tracert`/`traceroute`** 🗺️ | Windows/Linux | Rastrear ruta de paquetes | `tracert google.com` (Win)<br>`traceroute -I google.com` (Linux) | 🌍 Saltos de red |
+| **`netstat`** 📊 | Multiplataforma | Mostrar conexiones activas | `netstat -tuln` (Linux/macOS)<br>`netstat -ano` (Windows) | 🔗 Puertos abiertos |
+| **`nslookup`** 🔍 | Multiplataforma | Consultar registros DNS | `nslookup google.com`<br>`nslookup -type=mx google.com` | 📝 Registros DNS |
+| **`curl`** 🌐 | Multiplataforma | Transferencia de datos HTTP | `curl -v https://google.com`<br>`curl -I https://google.com` | 📦 Headers/Contenido |
+| **`telnet`** 🔌 | Multiplataforma | Probar conectividad a puertos | `telnet google.com 80` | ✉️ Comunicación raw |
+
+## 🎯 Casos de Uso Prácticos
+
+### 1. Diagnóstico de Conexión Básica
+```bash
+
+/macOS/Windows)
+ping -c 4 google.com  # Linux/macOS
+ping -n 4 google.com  # Windows
+```
+Salida típica:
+```bash
+
+64 bytes from 172.217.0.46: icmp_seq=0 ttl=115 time=25.3 ms
+```
+
+2. Analizar Ruta de Red
+```bash
+
+# Windows
+tracert google.com
+
+# Linux (requiere instalación)
+sudo apt install traceroute
+traceroute -I google.com  # Usa ICMP
+```
+3. Inspeccionar Conexiones Activas
+```bash
+
+# Linux/macOS (puertos escuchando)
+netstat -tuln | grep LISTEN
+
+# Windows (con PID)
+netstat -ano | findstr LISTENING
+```
+4. Depuración HTTP/API con Curl
+```bash
+
+# Ver headers completos (útil para APIs)
+curl -v https://api.example.com/users
+
+# Solo headers de respuesta
+curl -I https://google.com
+
+# Enviar JSON (POST request)
+curl -X POST -H "Content-Type: application/json" -d '{"user":"test"}' https://api.example.com/login
+```
