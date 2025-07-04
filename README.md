@@ -80,3 +80,40 @@ Es el cerebro del enrutamiento en la red. Su responsabilidad es encontrar la mej
 Representa la conexión física y lógica directa entre dispositivos. Incluye tanto el hardware (cables, tarjetas de red, antenas WiFi) como los protocolos que controlan cómo los datos se transmiten físicamente. Esta capa maneja tecnologías como Ethernet para redes cableadas, WiFi para conexiones inalámbricas, y otros métodos de acceso al medio físico de transmisión.
 
 Cada capa depende de las demás: cuando envías un mensaje, comienza en la capa de aplicación y desciende hasta la capa de acceso a red para ser transmitido. Al llegar al destino, el proceso se invierte, subiendo capa por capa hasta llegar a la aplicación receptora.
+
+# 🔢 Direcciones IP: Tu Dirección en Internet
+Las direcciones IP son como las direcciones postales de internet. Cada dispositivo necesita una para comunicarse.
+
+## IPv4
+Formato: 192.168.1.1
+
+4 números del 0 al 255 separados por puntos
+
+Problema: Solo hay ~4.3 mil millones de direcciones posibles
+
+## IPv6
+Formato: 2001:0db8:85a3::8a2e:0370:7334
+
+8 grupos de 4 dígitos hexadecimales
+
+Ventaja: Prácticamente infinitas direcciones
+
+## IP Privada
+Ejemplos: 192.168.x.x, 10.x.x.x
+
+Solo funciona en tu red local
+
+Uso: Dispositivos en tu casa/oficina
+
+## IP Pública
+Ejemplo: 8.8.8.8 (Google DNS)
+
+Única en todo internet
+
+Uso: Servidores web, APIs públicas
+
+### 🏠 Analogía con direcciones postales:
+IP Pública: "Calle Mayor 123, Madrid" - Te encuentra desde cualquier lugar
+
+IP Privada: "Apartamento 2B" - Solo útil dentro del edificio
+
