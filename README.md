@@ -79,7 +79,7 @@ Es el GPS de internet. Su trabajo es encontrar la mejor ruta para que tus datos 
 ## 4. 🔌 Capa de Acceso a Red
 Representa la conexión física real entre dispositivos. Incluye todo el hardware que puedes tocar: cables de red, tarjetas de red, switches, routers y antenas WiFi 📡. También maneja los protocolos que controlan cómo se transmiten físicamente los datos. Gestiona tecnologías como Ethernet para conexiones por cable 🔗, WiFi para redes inalámbricas 📶, Bluetooth para dispositivos cercanos 📲, y otros métodos de conexión física.
 
-#🎯 Analogía Simple
+# 🎯 Analogía Simple
 Imagina enviar una pizza a domicilio 🍕:
 
 Capa de Aplicación 📱: La app donde pides la pizza
