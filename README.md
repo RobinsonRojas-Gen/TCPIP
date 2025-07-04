@@ -302,3 +302,69 @@ curl -I https://google.com
 # Enviar JSON (POST request)
 curl -X POST -H "Content-Type: application/json" -d '{"user":"test"}' https://api.example.com/login
 ```
+# 🛠️ Herramientas Básicas para Ver TCP/IP en Acción
+
+Estas herramientas te permiten explorar y diagnosticar cómo funciona el protocolo TCP/IP en tiempo real:
+
+## 🏓 ping
+Verificar si un dispositivo está vivo
+Envía pequeños paquetes de datos a una dirección IP para verificar si está disponible y medir el tiempo de respuesta.
+bashping google.com
+ping 8.8.8.8
+¿Qué hace? 📡 Envía paquetes ICMP y espera respuesta
+Útil para: Verificar conectividad, medir latencia, diagnosticar problemas de red
+
+## 🗺️ tracert/traceroute
+Seguir la ruta de tus datos
+Muestra todos los routers intermedios por los que pasan tus datos hasta llegar al destino.
+bash# Windows
+tracert google.com
+
+## Linux/Mac
+traceroute google.com
+¿Qué hace? 🛤️ Rastrea cada salto en la ruta de red
+Útil para: Identificar dónde se pierde la conexión, ver la geografía de internet
+
+## 📊 netstat
+Ver conexiones activas
+Muestra todas las conexiones de red activas en tu dispositivo y qué programas las están usando.
+bashnetstat -an    # Mostrar todas las conexiones
+netstat -b     # Mostrar qué programa usa cada conexión
+¿Qué hace? 🔍 Lista puertos abiertos y conexiones establecidas
+Útil para: Detectar programas que usan internet, verificar servicios activos
+
+## 🔍 nslookup
+Consultar el DNS
+Traduce nombres de sitios web a direcciones IP y viceversa, como un directorio telefónico de internet.
+bashnslookup google.com
+nslookup 8.8.8.8
+¿Qué hace? 📞 Consulta servidores DNS para resolver nombres
+Útil para: Verificar si un dominio existe, encontrar la IP de un sitio web
+
+## 🌐 curl
+Descargar contenido web
+Obtiene páginas web, archivos o datos de servidores directamente desde la línea de comandos.
+bashcurl https://google.com
+curl -I https://github.com    # Solo headers
+curl -o archivo.zip https://ejemplo.com/archivo.zip
+¿Qué hace? 📥 Realiza peticiones HTTP/HTTPS y muestra la respuesta
+Útil para: Probar APIs, descargar archivos, verificar respuestas de servidores
+
+## 📞 telnet
+Conexión directa a servicios
+Establece una conexión de texto plano con cualquier servicio de red para comunicarse directamente.
+bashtelnet google.com 80
+telnet smtp.gmail.com 25
+¿Qué hace? 🔗 Conecta directamente a puertos específicos
+Útil para: Probar si un servicio está funcionando, enviar comandos manuales
+
+## 🎯 Ejemplo Práctico
+Para diagnosticar problemas de conexión a github.com:
+
+ping github.com 🏓 → ¿Está disponible?
+traceroute github.com 🗺️ → ¿Por dónde viajan mis datos?
+nslookup github.com 🔍 → ¿Qué IP tiene?
+curl -I https://github.com 🌐 → ¿Responde el servidor web?
+telnet github.com 443 📞 → ¿Está abierto el puerto HTTPS?
+
+¡Así puedes ver TCP/IP trabajando en tiempo real! ⚡
