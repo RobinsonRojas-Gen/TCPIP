@@ -368,3 +368,60 @@ curl -I https://github.com 🌐 → ¿Responde el servidor web?
 telnet github.com 443 📞 → ¿Está abierto el puerto HTTPS?
 
 ¡Así puedes ver TCP/IP trabajando en tiempo real! ⚡
+
+---
+
+# 📚 Glosario de Términos Esenciales
+**IP (Internet Protocol)**
+Dirección única que identifica un dispositivo en la red
+
+**DNS (Domain Name System)**
+Sistema que convierte nombres de dominio en direcciones IP
+
+**Gateway**
+Punto de acceso entre dos redes diferentes (tu router)
+
+**NAT (Network Address Translation)**
+Permite que múltiples dispositivos compartan una IP pública
+
+**Subred**
+División lógica de una red IP (ej: 192.168.1.0/24)
+
+**Paquete**
+Unidad básica de datos que viaja por la red
+
+**Socket**
+Combinación de IP + Puerto (ej: 192.168.1.1:3000)
+
+**Firewall**
+Sistema que controla el tráfico de red entrante y saliente
+
+**Proxy**
+Intermediario que actúa en nombre de otros dispositivos
+
+**Load Balancer**
+Distribuye el tráfico entre múltiples servidores
+
+**CDN (Content Delivery Network)**
+Red de servidores distribuidos para acelerar la entrega de contenido
+
+**Handshake**
+Proceso de establecimiento de conexión entre cliente y servidor
+
+**Bandwidth**
+Cantidad máxima de datos que puede transmitir una conexión
+
+**Latency**
+Tiempo que tarda un paquete en viajar del origen al destino
+
+**🎯 Resumen para Desarrolladores Web**
+Los conceptos más importantes que debes recordar:
+
+**HTTP/HTTPS:** Siempre usa HTTPS en producción
+**DNS:** Entender cómo se resuelven los dominios
+**Puertos:** Conocer los puertos comunes (80, 443, 22, 3000)
+**TCP vs UDP:** TCP para datos críticos, UDP para velocidad
+**IP privada vs pública:** Fundamental para configurar servidores
+**Herramientas:** DevTools, curl, ping para debugging
+
+---
