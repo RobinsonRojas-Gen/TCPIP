@@ -117,3 +117,53 @@ IP Pública: "Calle Mayor 123, Madrid" - Te encuentra desde cualquier lugar
 
 IP Privada: "Apartamento 2B" - Solo útil dentro del edificio
 
+# 🚪 Puertos y Protocolos Esenciales para Desarrolladores Web
+
+## 🔍 ¿Qué es un Puerto?
+Un **puerto** es como un "número de puerta" virtual (0-65535) que permite a diferentes servicios comunicarse en una misma IP.  
+📍 **Analogía**: Si una IP es una dirección de edificio, los puertos son los números de departamento.
+
+## 🏆 Top 10 Puertos que Todo Dev Web Debe Conocer
+
+| Puerto | Protocolo | Uso Típico                     | Comando Verificación       | Seguridad |
+|--------|-----------|--------------------------------|---------------------------|-----------|
+| **80** | HTTP      | Web no cifrada                 | `netstat -tuln \| grep 80` | ❌ Riesgo |
+| **443**| HTTPS     | Web segura (SSL/TLS)           | `openssl s_client -connect host:443` | ✅ Seguro |
+| **22** | SSH       | Conexión remota segura         | `ssh -v user@host -p 22`  | ✅ Seguro* |
+| **3306**| MySQL    | Bases de datos relacionales    | `telnet localhost 3306`   | 🔐 Con auth |
+| **5432**| PostgreSQL | DB relacional avanzada       | `lsof -i :5432`           | 🔐 Con auth |
+| **27017**| MongoDB  | Bases de datos NoSQL          | `mongosh --port 27017`    | ⚠️ Por defecto sin auth |
+| **6379**| Redis    | Cache/Base de datos clave-valor| `redis-cli -p 6379`       | ⚠️ Comúnmente expuesto |
+| **8000**| Dev Server | Servidores locales (Django/Flask)| `curl localhost:8000`   | ❌ Solo local |
+| **3000**| Node.js  | Aplicaciones React/Next.js     | `lsof -i :3000`           | ❌ Solo dev |
+| **8080**| Proxy/Alt HTTP | Alternativa a HTTP       | `netcat -zv host 8080`    | ⚠️ Depende de config |
+
+## 💻 Comandos Útiles
+```bash
+# Ver puertos en uso
+ss -tulnp  # Linux (moderno)
+netstat -tuln  # Linux/macOS (legacy)
+
+# Probar conexión a puerto
+telnet example.com 80
+nc -zv example.com 443
+
+# Escanear puertos locales (solo diagnóstico)
+nmap -sT -p- localhost  # Requiere instalación
+```
+🔐 Buenas Prácticas
+Nunca expongas puertos de DB (3306, 5432) directamente a Internet
+
+Usa SSH tunneling para conexiones seguras:
+ssh -L 3306:localhost:3306 user@remote-host
+
+Cambia puertos predeterminados en producción (ej: MySQL a 33060)
+
+Firewall obligatorio:
+```bash
+
+sudo ufw allow 443/tcp  # Ejemplo para HTTPS
+sudo ufw deny 22  # Bloquear SSH si no se usa
+```
+
+[🔼 Volver al inicio](#-Puertos-y-Protocolos-Esenciales-para-Desarrolladores-Web)
