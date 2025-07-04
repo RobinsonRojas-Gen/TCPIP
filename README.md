@@ -63,7 +63,7 @@ Internet (TCP/IP)
 
 [🔼 Volver al inicio](#-tcpip-vs-osi-modelos-de-red-comparados)
 
-#🌐 El Modelo TCP/IP: Las 4 Capas Fundamentales
+# 🌐 El Modelo TCP/IP: Las 4 Capas Fundamentales
 
 El modelo TCP/IP es la arquitectura que hace posible internet. Está compuesto por cuatro capas que trabajan juntas para enviar información de un lugar a otro:
 
