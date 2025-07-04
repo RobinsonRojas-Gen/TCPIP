@@ -417,11 +417,11 @@ Tiempo que tarda un paquete en viajar del origen al destino
 **🎯 Resumen para Desarrolladores Web:**
 Los conceptos más importantes que debes recordar:
 
-**HTTP/HTTPS:** Siempre usa HTTPS en producción
-**DNS:** Entender cómo se resuelven los dominios
-**Puertos:** Conocer los puertos comunes (80, 443, 22, 3000)
-**TCP vs UDP:** TCP para datos críticos, UDP para velocidad
-**IP privada vs pública:** Fundamental para configurar servidores
-**Herramientas:** DevTools, curl, ping para debugging
+- **HTTP/HTTPS:** Siempre usa HTTPS en producción
+- **DNS:** Entender cómo se resuelven los dominios
+- **Puertos:** Conocer los puertos comunes (80, 443, 22, 3000)
+- **TCP vs UDP:** TCP para datos críticos, UDP para velocidad
+- **IP privada vs pública:** Fundamental para configurar servidores
+- **Herramientas:** DevTools, curl, ping para debugging
 
 ---
