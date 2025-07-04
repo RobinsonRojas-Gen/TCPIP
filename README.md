@@ -372,49 +372,49 @@ telnet github.com 443 📞 → ¿Está abierto el puerto HTTPS?
 ---
 
 # 📚 Glosario de Términos Esenciales
-**IP (Internet Protocol)**
+- **IP (Internet Protocol):**
 Dirección única que identifica un dispositivo en la red
 
-**DNS (Domain Name System)**
+ - **DNS (Domain Name System):**
 Sistema que convierte nombres de dominio en direcciones IP
 
-**Gateway**
+- **Gateway:**
 Punto de acceso entre dos redes diferentes (tu router)
 
-**NAT (Network Address Translation)**
+- **NAT (Network Address Translation):**
 Permite que múltiples dispositivos compartan una IP pública
 
-**Subred**
+- **Subred:**
 División lógica de una red IP (ej: 192.168.1.0/24)
 
-**Paquete**
+- **Paquete:**
 Unidad básica de datos que viaja por la red
 
-**Socket**
+- **Socket:**
 Combinación de IP + Puerto (ej: 192.168.1.1:3000)
 
-**Firewall**
+- **Firewall:**
 Sistema que controla el tráfico de red entrante y saliente
 
-**Proxy**
+- **Proxy:**
 Intermediario que actúa en nombre de otros dispositivos
 
-**Load Balancer**
+- **Load Balancer:**
 Distribuye el tráfico entre múltiples servidores
 
-**CDN (Content Delivery Network)**
+- **CDN (Content Delivery Network):**
 Red de servidores distribuidos para acelerar la entrega de contenido
 
-**Handshake**
+- **Handshake:**
 Proceso de establecimiento de conexión entre cliente y servidor
 
-**Bandwidth**
+- **Bandwidth:**
 Cantidad máxima de datos que puede transmitir una conexión
 
-**Latency**
+- **Latency:**
 Tiempo que tarda un paquete en viajar del origen al destino
 
-**🎯 Resumen para Desarrolladores Web**
+**🎯 Resumen para Desarrolladores Web:**
 Los conceptos más importantes que debes recordar:
 
 **HTTP/HTTPS:** Siempre usa HTTPS en producción
