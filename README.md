@@ -205,3 +205,40 @@ En Zoom o Teams, es mejor que la conversación fluya aunque se corte brevemente
 La comunicación en tiempo real requiere velocidad más que precisión absoluta
 
 [🔼 Volver al inicio](#-Puertos-y-Protocolos-Esenciales-para-Desarrolladores-Web)
+
+
+# 🔗 ¿Qué pasa cuando navegas a una página?
+Proceso básico de conexión en la web paso a paso:
+
+### 1. Escribes la URL
+Tecleas "https://github.com" en tu navegador
+
+### 2. Resolución DNS
+Tu navegador pregunta: "¿Cuál es la IP de github.com?"
+
+Respuesta: "140.82.114.4"
+
+### 3. Establecimiento de conexión TCP
+Tu navegador se conecta a 140.82.114.4:443
+
+Handshake de 3 pasos: SYN → SYN-ACK → ACK
+
+### 4. Negociación SSL/TLS
+Se establece la conexión cifrada (HTTPS)
+
+Intercambio de certificados y claves
+
+### 5. Petición HTTP
+Se envía: "GET / HTTP/1.1"
+
+Incluye headers como User-Agent, Accept, etc.
+
+### 6. Respuesta del servidor
+GitHub responde con HTML, CSS, JavaScript
+
+Status: 200 OK, Content-Type: text/html
+
+### 7. Renderizado
+Tu navegador construye la página que ves
+
+Puede hacer peticiones adicionales para imágenes, CSS, etc.
